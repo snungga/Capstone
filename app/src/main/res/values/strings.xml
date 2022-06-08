@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">CapstoneProject</string>
+    <string name="item_list_icon_content_description">Icon in each item list</string>
 </resources>
