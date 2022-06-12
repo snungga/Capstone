@@ -1,18 +1,34 @@
 package bangkit.c22ps257.capstone.adapter
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import bangkit.c22ps257.capstone.databinding.StreetListItemBinding
 import bangkit.c22ps257.capstone.model.StreetModel
+import bangkit.c22ps257.capstone.ui.detail.DetailStreetActivity
+import com.firebase.ui.database.FirebaseRecyclerAdapter
+import com.firebase.ui.database.FirebaseRecyclerOptions
 
-class ListStreetAdapter(private val listStreet: List<StreetModel>) : RecyclerView.Adapter<ListStreetAdapter.ViewHolder>() {
-    class ViewHolder(private var binding: StreetListItemBinding) : RecyclerView.ViewHolder(binding.root) {
+class ListStreetAdapter(options: FirebaseRecyclerOptions<StreetModel>)
+    : FirebaseRecyclerAdapter<StreetModel, ListStreetAdapter.ViewHolder>(options) {
+        
+    inner class ViewHolder(private var binding: StreetListItemBinding) : RecyclerView.ViewHolder(binding.root) {
         fun bind(street: StreetModel) {
             binding.apply {
                 tvStreetName.text = street.name
                 tvStatus.text = street.status
-                tvVehicleNumber.text = street.vehiclePerDay.toString()
+                val car = street.carNumber
+                val truck = street.truckNumber
+                val motor = street.motorcycleNumber
+                val vehicleNumber = car + truck + motor
+                tvVehicleNumber.text = vehicleNumber.toString()
+            }
+            
+            itemView.setOnClickListener {
+                val intent = Intent(itemView.context, DetailStreetActivity::class.java)
+                intent.putExtra(DetailStreetActivity.EXTRA_STREET, street)
+                itemView.context.startActivity(intent)
             }
         }
     }
@@ -22,9 +38,7 @@ class ListStreetAdapter(private val listStreet: List<StreetModel>) : RecyclerVie
         return ViewHolder(binding)
     }
 
-    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.bind(listStreet[position])
+    override fun onBindViewHolder(holder: ViewHolder, position: Int, model: StreetModel) {
+        holder.bind(model)
     }
-
-    override fun getItemCount(): Int = listStreet.size
 }
