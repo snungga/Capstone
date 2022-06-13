@@ -14,3 +14,17 @@
   <img width="400" height="350" src="https://github.com/snungga/Capstone/blob/master/Png/1.png">
 </p>
 
+# Cloud Computing 
+- due to big misunderstanding in the process until 13 june our cc still unable to sync md and ml with gcp.
+<center>Display Front End</center>
+<p align="center">
+  <img width="400" height="350" src="https://github.com/snungga/Capstone/blob/master/Png/3.jpeg">
+</p>
+
+# Mobile Development
+- Create Real Time Database
+- UI/UX
+<center>Display UI Android </center>
+<p align="center">
+  <img width="400" height="350" src="https://github.com/snungga/Capstone/blob/master/Png/2.PNG">
+</p>
