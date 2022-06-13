@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">CapstoneProject</string>
     <string name="item_list_icon_content_description">Icon in each item list</string>
+    <string name="car">Mobil</string>
+    <string name="truck">Truk</string>
+    <string name="motorcycle">Motor</string>
+    <string name="vehicles_per_hour">Kendaraan Per Jam</string>
 </resources>
