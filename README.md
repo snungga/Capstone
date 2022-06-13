@@ -1,2 +1,4 @@
 # Capstone Smart Monitor Traffic Conditions: Detects the Number of Motor Vehicles Daily Passes
-![Alt text]([url "Title"](https://www.canva.com/design/DAFDckvjQOg/XpA4ey-XRixPCrw3XDVLmg/edit?utm_content=DAFDckvjQOg&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton))
+<p align="center">
+  <img width="400" height="350" src="[https://raw.githubusercontent.com/Bangkit-Team-NutriA/ML/main/Notebook/EfficientNetV2LWithAugmentDense+/kesimpulan/arsitektur model.PNG](https://github.com/snungga/Capstone/blob/master/Png/backgrounf.png)">
+</p>
